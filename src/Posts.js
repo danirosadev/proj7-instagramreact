@@ -61,7 +61,7 @@ function Post(props, { curtir }) {
                 <div class="curtidas">
                     <img src="assets/img/respondeai.svg" />
                     <div class="texto">
-                        Curtido por <strong>adorable_animals</strong> e <strong>outras {numLikes} pessoas</strong>
+                        Curtido por <strong>adorable_animals</strong> e <strong>outras <span data-test="likes-number">{numLikes}</span> pessoas</strong>
                     </div>
                 </div>
             </div>

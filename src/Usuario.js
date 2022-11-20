@@ -7,7 +7,7 @@ function UsuarioLogado(props) {
         <>
             {props.img}
             <div class="texto">
-                <strong>{props.user}</strong>
+                {props.user}
                 <span>
                     {props.nome}
                     {props.icon}
@@ -35,7 +35,8 @@ export default function Usuario() {
         <div data-test="user" class="usuario">
             <UsuarioLogado 
             img={<img data-test="profile-image" onClick={alteraFoto} src={foto} />} 
-            user="catanacomics" nome={nome} 
+            user={<strong>Catana</strong>}
+            nome={<span>{nome}</span>}
             icon={<ion-icon data-test="edit-name" onClick={alteraNome} name="pencil"></ion-icon>} />
         </div>
     )
