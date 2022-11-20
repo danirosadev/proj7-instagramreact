@@ -23,12 +23,24 @@ export default function Usuario() {
 
     function alteraNome() {
         let novoNome = prompt("Qual o seu nome?")
-        setNome(novoNome)
+
+        if (novoNome === ""){
+            alert("Por favor, insira seu nome")
+        } else {
+            setNome(novoNome)
+        }
+        
     }
 
     function alteraFoto() {
         let novaFoto = prompt("Insira o link de sua nova foto:")
-        setFoto(novaFoto)
+
+        if (novaFoto === ""){
+            alert("Por favor, insira um link válido")
+        } else {
+            setFoto(novaFoto)
+        }
+       
     }
 
     return (
@@ -36,7 +48,7 @@ export default function Usuario() {
             <UsuarioLogado 
             img={<img data-test="profile-image" onClick={alteraFoto} src={foto} />} 
             user={<strong>Catana</strong>}
-            nome={<span>{nome}</span>}
+            nome={<span data-test="name">{nome}</span>}
             icon={<ion-icon data-test="edit-name" onClick={alteraNome} name="pencil"></ion-icon>} />
         </div>
     )
