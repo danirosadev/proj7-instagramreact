@@ -30,6 +30,14 @@ function Post(props, { curtir }) {
         }
     }
 
+    function curtirFoto() {
+        if (like === "heart-outline") {
+            setLike("heart")
+            setCor("danger")
+            setNumLikes(numLikes + 1)
+        }
+    }
+
     return (
         <div data-test="post" class="post">
             <div class="topo">
@@ -43,7 +51,7 @@ function Post(props, { curtir }) {
             </div>
 
             <div class="conteudo">
-                <img data-test="post-image" onClick={curtir} src={props.conteudoImg} />
+                <img data-test="post-image" onDoubleClick={curtirFoto} src={props.conteudoImg} />
             </div>
 
             <div class="fundo">
